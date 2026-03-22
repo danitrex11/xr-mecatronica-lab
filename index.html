@@ -1,22 +1,48 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
+<meta charset="utf-8">
+<title>XR Paletizadora</title>
+
 <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
+
 </head>
 
 <body>
 
 <a-scene>
 
-<a-box position="0 1 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+<!-- Cargar modelo -->
+<a-assets>
+<a-asset-item id="paletizadora" src="models/paletizadora.glb"></a-asset-item>
+</a-assets>
 
-<a-sphere position="2 1 -4" radius="1" color="#EF2D5E"></a-sphere>
+<!-- Piso -->
+<a-plane rotation="-90 0 0"
+         width="20"
+         height="20"
+         color="#808080">
+</a-plane>
 
-<a-cylinder position="-2 1 -4" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+<!-- Modelo industrial -->
+<a-entity 
+    gltf-model="#paletizadora"
+    position="0 0 -5"
+    rotation="0 0 0"
+    scale="1 1 1">
+</a-entity>
 
-<a-plane rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+<!-- Luz -->
+<a-light type="ambient" intensity="0.8"></a-light>
 
+<a-light
+    type="directional"
+    position="2 4 3"
+    intensity="0.6">
+</a-light>
+
+<!-- Cielo -->
 <a-sky color="#ECECEC"></a-sky>
 
 </a-scene>
