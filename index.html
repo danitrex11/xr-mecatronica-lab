@@ -14,21 +14,10 @@
 
 <a-scene background="color: #ECECEC">
 
-<!-- ========================= -->
-
-<!-- CARGAR MODELO -->
-
-<!-- ========================= -->
 
 <a-assets>
-<a-asset-item id="paletizadora" src="models/paletizadora.glb"></a-asset-item>
+<a-asset-item id="paletizadora" src="models/paletizadora1.glb"></a-asset-item>
 </a-assets>
-
-<!-- ========================= -->
-
-<!-- ILUMINACIÓN (MUY IMPORTANTE) -->
-
-<!-- ========================= -->
 
 <a-light type="ambient" intensity="1"></a-light>
 
@@ -42,11 +31,6 @@
  position="-5 6 -5"
  intensity="0.8"> </a-light>
 
-<!-- ========================= -->
-
-<!-- PISO -->
-
-<!-- ========================= -->
 
 <a-plane
 rotation="-90 0 0"
@@ -54,11 +38,6 @@ width="50"
 height="50"
 color="#777777"> </a-plane>
 
-<!-- ========================= -->
-
-<!-- MODELO INDUSTRIAL -->
-
-<!-- ========================= -->
 
 <a-entity
  gltf-model="#paletizadora"
@@ -66,11 +45,6 @@ color="#777777"> </a-plane>
  rotation="0 180 0"
  scale="0.03 0.03 0.03"> </a-entity>
 
-<!-- ========================= -->
-
-<!-- CÁMARA VR -->
-
-<!-- ========================= -->
 
 <a-entity position="0 1.6 0">
 
@@ -79,12 +53,6 @@ wasd-controls-enabled="true"
 look-controls="pointerLockEnabled: true"> </a-camera>
 
 </a-entity>
-
-<!-- ========================= -->
-
-<!-- CIELO -->
-
-<!-- ========================= -->
 
 <a-sky color="#DDDDDD"></a-sky>
 
