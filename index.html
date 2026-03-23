@@ -2,15 +2,20 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Paletizadora XR Realista</title>
+  <title>Paletizadora XR</title>
 
-  <script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe.min.js"></script>
+  <!-- A-Frame estable -->
+  <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+
+  <!-- Environment (para realismo) -->
   <script src="https://cdn.jsdelivr.net/npm/aframe-environment-component@1.3.4/dist/aframe-environment-component.min.js"></script>
 </head>
 
 <body>
 
-<a-scene renderer="colorManagement: true; physicallyCorrectLights: true">
+<a-scene 
+  renderer="colorManagement: true; physicallyCorrectLights: true; exposure: 1.2"
+  background="color: #ECECEC">
 
   <!-- ========================= -->
   <!-- ASSETS -->
@@ -20,37 +25,30 @@
   </a-assets>
 
   <!-- ========================= -->
-  <!-- ENTORNO (CLAVE PARA REALISMO) -->
+  <!-- ENTORNO (CLAVE PARA COLOR) -->
   <!-- ========================= -->
   <a-entity environment="
     preset: warehouse;
-    lighting: point;
-    shadow: true;
+    lighting: distant;
     ground: flat;
-    groundColor: #555;
-    grid: none">
+    groundColor: #666;
+    shadow: true">
   </a-entity>
 
   <!-- ========================= -->
-  <!-- LUCES -->
+  <!-- LUCES SUAVES -->
   <!-- ========================= -->
-  <a-light type="ambient" intensity="0.5"></a-light>
+  <a-light type="ambient" intensity="0.6"></a-light>
 
   <a-light 
     type="directional"
     position="5 10 5"
-    intensity="1.5"
+    intensity="1.2"
     castShadow="true">
   </a-light>
 
-  <a-light
-    type="directional"
-    position="-5 6 -5"
-    intensity="1">
-  </a-light>
-
   <!-- ========================= -->
-  <!-- MODELO -->
+  <!-- MODELO (SIN FORZAR COLOR) -->
   <!-- ========================= -->
   <a-entity
     gltf-model="#paletizadora"
@@ -64,7 +62,7 @@
   <!-- CÁMARA -->
   <!-- ========================= -->
   <a-entity position="0 1.6 2">
-    <a-camera
+    <a-camera 
       wasd-controls="acceleration: 20"
       look-controls="pointerLockEnabled: true">
     </a-camera>
