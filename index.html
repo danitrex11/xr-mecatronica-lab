@@ -3,111 +3,75 @@
 <head>
   <meta charset="utf-8">
   <title>Estación de Enlatado PRO</title>
-
   <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
 </head>
 
 <body>
 <a-scene renderer="physicallyCorrectLights: true" background="color: #eaeaea">
 
-
   <!-- ILUMINACIÓN PRO -->
   <a-light type="ambient" intensity="0.8"></a-light>
-
-  <a-light 
-    type="directional" 
-    position="5 10 5" 
-    intensity="1.5"
-    castShadow="true">
-  </a-light>
+  <a-light type="directional" position="5 10 5" intensity="1.5" castShadow="true"></a-light>
 
   <!-- FONDO TIPO ESTUDIO -->
-
-  <a-plane rotation="-90 0 0" width="40" height="40" color="#d9d9d9"></a-plane>
-  <a-plane position="0 10 -20" width="40" height="20" color="#f5f5f5"></a-plane>
-
+  <a-plane rotation="-90 0 0" width="14" height="10" color="#cfd8dc"></a-plane>
+  <a-plane position="0 3 -9" width="14" height="6" color="#eceff1"></a-plane>
+  <a-plane position="-7 3 -4" rotation="0 90 0" width="10" height="6" color="#e3f2fd"></a-plane>
+  <a-plane position="7 3 -4" rotation="0 -90 0" width="10" height="6" color="#e3f2fd"></a-plane>
 
   <!-- BANDA TRANSPORTADORA -->
-
   <a-box 
-  position="0 0.35 -4" 
-  rotation="0 90 0"
-  geometry="primitive: box; depth: 10; height: 0.3; width: 1.6" 
-  material="color: #2b2b2b; roughness: 0.7">
+    position="0 0.35 -4" 
+    rotation="0 90 0"
+    geometry="primitive: box; depth: 10; height: 0.3; width: 1.6" 
+    material="color: #263238; roughness: 0.6">
   </a-box>
 
   <!-- RODILLOS -->
-  
-<a-cylinder position="-4.5 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0"
-  material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
-
-<a-cylinder position="4.5 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0"
-  material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
-  
- <a-cylinder position="-3 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0"
-  material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
-
-<a-cylinder position="-1.5 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0"
-  material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
-
-<a-cylinder position="0 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0"
-  material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
-
-<a-cylinder position="1.5 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0"
-  material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
-
-<a-cylinder position="3 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0"
-  material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
-
+  <a-cylinder position="-4.5 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0" material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
+  <a-cylinder position="4.5 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0" material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
+  <a-cylinder position="-3 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0" material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
+  <a-cylinder position="-1.5 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0" material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
+  <a-cylinder position="0 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0" material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
+  <a-cylinder position="1.5 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0" material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
+  <a-cylinder position="3 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0" material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
 
   <!-- ESTRUCTURA -->
+  <a-entity position="0 2 -4" rotation="0 90 0">
+    <a-box position="0 0 0" width="3" height="0.2" depth="1.5" color="#546e7a"></a-box>
+    <a-box position="-1 -1 0.5" width="0.2" height="2" depth="0.2" color="#78909c"></a-box>
+    <a-box position="1 -1 0.5" width="0.2" height="2" depth="0.2" color="#78909c"></a-box>
+  </a-entity>
 
-<a-entity position="0 2 -4" rotation="0 90 0">
-
-  <!-- Superficie centrada en el origen del grupo -->
-  <a-box position="0 0 0" width="3" height="0.2" depth="1.5" color="#666"></a-box>
-
-  <!-- Patas -->
-  <a-box position="-1  -1  0.5" width="0.2" height="2" depth="0.2" color="#777"></a-box>
-  <a-box position="1   -1  0.5" width="0.2" height="2" depth="0.2" color="#777"></a-box>
-
-</a-entity>
   <!-- TANQUE -->
-
-  <a-cylinder 
-    position="0 3 -4" 
-    radius="0.7" height="1.3"
-    material="color: #4fc3f7; metalness: 0.3; roughness: 0.2">
-  </a-cylinder>
+  <a-cylinder position="0 3 -4" radius="0.7" height="1.3" material="color: #29b6f6; metalness: 0.4; roughness: 0.2"></a-cylinder>
 
   <!-- Boquilla -->
   <a-cylinder position="0 2.2 -4" radius="0.08" height="0.9" color="#333"></a-cylinder>
 
   <!-- LATAS MÁS REALISTAS -->
-
-  <a-cylinder 
-    radius="0.22" height="0.5"
-    position="-4 0.7 -4"
-    material="metalness: 0.8; roughness: 0.3; color: #c0c0c0"
-    animation="property: position; to: 4 0.7 -4; dur: 5000; loop: true">
+  <a-cylinder radius="0.22" height="0.5" position="-4 0.7 -4" material="metalness: 0.8; roughness: 0.3; color: #c0c0c0"
+    animation__move1="property: position; to: -0.5 0.7 -4; dur: 3000; easing: linear"
+    animation__pause="property: position; to: -0.5 0.7 -4; dur: 1500; delay: 3000"
+    animation__move2="property: position; to: 4 0.7 -4; dur: 3000; delay: 4500; easing: linear"
+    animation__loop="property: position; to: -4 0.7 -4; dur: 1; delay: 7500; loop: true">
   </a-cylinder>
 
-  <a-cylinder 
-    radius="0.22" height="0.5"
-    position="-6 0.7 -4"
-    material="metalness: 0.8; roughness: 0.3; color: #b0bec5"
-    animation="property: position; to: 4 0.7 -4; dur: 5000; delay: 2000; loop: true">
+  <a-cylinder radius="0.22" height="0.5" position="-4 0.7 -4" material="metalness: 0.8; roughness: 0.3; color: #b0bec5"
+    animation__move1="property: position; to: -0.5 0.7 -4; dur: 3000; delay: 1500"
+    animation__pause="property: position; to: -0.5 0.7 -4; dur: 1500; delay: 4500"
+    animation__move2="property: position; to: 4 0.7 -4; dur: 3000; delay: 6000"
+    animation__loop="property: position; to: -4 0.7 -4; dur: 1; delay: 9000; loop: true">
   </a-cylinder>
 
-  <a-cylinder 
-    radius="0.22" height="0.5"
-    position="-8 0.7 -4"
-    material="metalness: 0.8; roughness: 0.3; color: #90a4ae"
-    animation="property: position; to: 4 0.7 -4; dur: 5000; delay: 4000; loop: true">
+  <a-cylinder radius="0.22" height="0.5" position="-4 0.7 -4" material="metalness: 0.8; roughness: 0.3; color: #90a4ae"
+    animation__move1="property: position; to: -0.5 0.7 -4; dur: 3000; delay: 3000"
+    animation__pause="property: position; to: -0.5 0.7 -4; dur: 1500; delay: 6000"
+    animation__move2="property: position; to: 4 0.7 -4; dur: 3000; delay: 7500"
+    animation__loop="property: position; to: -4 0.7 -4; dur: 1; delay: 10500; loop: true">
   </a-cylinder>
 
   <!-- CÁMARA MEJOR POSICIONADA -->
-
   <a-entity position="0 1.6 5">
     <a-camera wasd-controls look-controls></a-camera>
   </a-entity>
