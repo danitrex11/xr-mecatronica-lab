@@ -10,10 +10,9 @@
 <body>
 <a-scene renderer="physicallyCorrectLights: true" background="color: #eaeaea">
 
-  <!-- ========================= -->
+
   <!-- ILUMINACIÓN PRO -->
-  <!-- ========================= -->
-  <a-light type="ambient" intensity="0.6"></a-light>
+  <a-light type="ambient" intensity="0.8"></a-light>
 
   <a-light 
     type="directional" 
@@ -22,15 +21,14 @@
     castShadow="true">
   </a-light>
 
-  <!-- ========================= -->
   <!-- FONDO TIPO ESTUDIO -->
-  <!-- ========================= -->
+
   <a-plane rotation="-90 0 0" width="40" height="40" color="#d9d9d9"></a-plane>
   <a-plane position="0 10 -20" width="40" height="20" color="#f5f5f5"></a-plane>
 
-  <!-- ========================= -->
+
   <!-- BANDA TRANSPORTADORA -->
-  <!-- ========================= -->
+
   <a-box 
   position="0 0.35 -4" 
   rotation="0 90 0"
@@ -38,10 +36,8 @@
   material="color: #2b2b2b; roughness: 0.7">
   </a-box>
 
-
-  <!-- ========================= -->
   <!-- RODILLOS -->
-  <!-- ========================= -->
+  
 <a-cylinder position="-4.5 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0"
   material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
 
@@ -63,9 +59,9 @@
 <a-cylinder position="3 0.35 -4" radius="0.25" height="1.6" rotation="90 0 0"
   material="metalness: 0.9; roughness: 0.2; color: #888"></a-cylinder>
 
-  <!-- ========================= -->
+
   <!-- ESTRUCTURA -->
-  <!-- ========================= -->
+
 <a-entity position="0 2 -4" rotation="0 90 0">
 
   <!-- Superficie centrada en el origen del grupo -->
@@ -76,9 +72,8 @@
   <a-box position="1   -1  0.5" width="0.2" height="2" depth="0.2" color="#777"></a-box>
 
 </a-entity>
-  <!-- ========================= -->
   <!-- TANQUE -->
-  <!-- ========================= -->
+
   <a-cylinder 
     position="0 3 -4" 
     radius="0.7" height="1.3"
@@ -88,9 +83,7 @@
   <!-- Boquilla -->
   <a-cylinder position="0 2.2 -4" radius="0.08" height="0.9" color="#333"></a-cylinder>
 
-  <!-- ========================= -->
   <!-- LATAS MÁS REALISTAS -->
-  <!-- ========================= -->
 
   <a-cylinder 
     radius="0.22" height="0.5"
@@ -113,9 +106,8 @@
     animation="property: position; to: 4 0.7 -4; dur: 5000; delay: 4000; loop: true">
   </a-cylinder>
 
-  <!-- ========================= -->
   <!-- CÁMARA MEJOR POSICIONADA -->
-  <!-- ========================= -->
+
   <a-entity position="0 1.6 5">
     <a-camera wasd-controls look-controls></a-camera>
   </a-entity>
