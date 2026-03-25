@@ -1,24 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
+  <meta charset="utf-8">
+  <title>Estación de Enlatado XR</title>
+
+  <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
 </head>
 
 <body>
+<a-scene background="color: #ECECEC">
 
-<a-scene>
+  <!-- ========================= -->
+  <!-- LUCES -->
+  <!-- ========================= -->
+  <a-light type="ambient" intensity="0.8"></a-light>
+  <a-light type="directional" position="5 10 5" intensity="1.5"></a-light>
 
-<a-box position="0 1 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+  <!-- ========================= -->
+  <!-- PISO -->
+  <!-- ========================= -->
+  <a-plane rotation="-90 0 0" width="30" height="30" color="#7A7A7A"></a-plane>
 
-<a-sphere position="2 1 -4" radius="1" color="#EF2D5E"></a-sphere>
+  <!-- ========================= -->
+  <!-- BANDA TRANSPORTADORA -->
+  <!-- ========================= -->
+  <a-box position="0 0.3 -3" depth="8" height="0.2" width="1.5" color="#2c2c2c"></a-box>
 
-<a-cylinder position="-2 1 -4" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+  <!-- Rodillos -->
+  <a-cylinder position="-3.5 0.3 -3" radius="0.2" height="1.5" rotation="0 0 90" color="#555"></a-cylinder>
+  <a-cylinder position="3.5 0.3 -3" radius="0.2" height="1.5" rotation="0 0 90" color="#555"></a-cylinder>
 
-<a-plane rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+  <!-- ========================= -->
+  <!-- ESTRUCTURA METÁLICA -->
+  <!-- ========================= -->
+  <a-box position="0 2 -3" depth="1.5" height="0.2" width="3" color="#888"></a-box>
+  <a-box position="-1.3 1 -3" depth="0.2" height="2" width="0.2" color="#888"></a-box>
+  <a-box position="1.3 1 -3" depth="0.2" height="2" width="0.2" color="#888"></a-box>
 
-<a-sky color="#ECECEC"></a-sky>
+  <!-- ========================= -->
+  <!-- TANQUE -->
+  <!-- ========================= -->
+  <a-cylinder position="0 3 -3" radius="0.6" height="1.2" color="#3FA9F5"></a-cylinder>
+
+  <!-- BOQUILLA -->
+  <a-cylinder position="0 2.2 -3" radius="0.08" height="0.8" color="#444"></a-cylinder>
+
+  <!-- ========================= -->
+  <!-- LATAS (ANIMADAS) -->
+  <!-- ========================= -->
+
+  <!-- Lata 1 -->
+  <a-cylinder 
+    radius="0.2" 
+    height="0.5" 
+    color="red"
+    position="-3 0.6 -3"
+    animation="property: position; to: 3 0.6 -3; dur: 6000; loop: true">
+  </a-cylinder>
+
+  <!-- Lata 2 -->
+  <a-cylinder 
+    radius="0.2" 
+    height="0.5" 
+    color="blue"
+    position="-5 0.6 -3"
+    animation="property: position; to: 3 0.6 -3; dur: 6000; delay: 2000; loop: true">
+  </a-cylinder>
+
+  <!-- Lata 3 -->
+  <a-cylinder 
+    radius="0.2" 
+    height="0.5" 
+    color="yellow"
+    position="-7 0.6 -3"
+    animation="property: position; to: 3 0.6 -3; dur: 6000; delay: 4000; loop: true">
+  </a-cylinder>
+
+  <!-- ========================= -->
+  <!-- CÁMARA -->
+  <!-- ========================= -->
+  <a-entity position="0 1.6 4">
+    <a-camera wasd-controls look-controls></a-camera>
+  </a-entity>
 
 </a-scene>
-
 </body>
 </html>
