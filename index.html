@@ -1,76 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Paletizadora XR PRO</title>
-
-  <!-- A-Frame -->
-  <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
-
-  <!-- Environment map component -->
-  <script src="https://cdn.jsdelivr.net/npm/aframe-environment-component@1.3.4/dist/aframe-environment-component.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aframe@1.4.1/dist/aframe-master.min.js"></script>
 </head>
 
 <body>
 
-<a-scene 
-  renderer="colorManagement: true; physicallyCorrectLights: true; exposure: 2">
+<a-scene>
 
-  <!-- ========================= -->
-  <!-- HDRI (IMAGEN REAL) -->
-  <!-- ========================= -->
-  <a-assets>
-    <img id="hdri" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
-    <a-asset-item id="paletizadora" src="models/paletizadora.glb"></a-asset-item>
-  </a-assets>
+<a-box position="0 1 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
 
-  <!-- SKY HDRI -->
-  <a-sky src="#hdri" rotation="0 -90 0"></a-sky>
+<a-sphere position="2 1 -4" radius="1" color="#EF2D5E"></a-sphere>
 
-  <!-- ========================= -->
-  <!-- LUCES -->
-  <!-- ========================= -->
-  <a-light type="ambient" intensity="1"></a-light>
+<a-cylinder position="-2 1 -4" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
 
-  <a-light 
-    type="directional"
-    position="5 10 5"
-    intensity="2"
-    castShadow="true">
-  </a-light>
+<a-plane rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
 
-  <!-- ========================= -->
-  <!-- MODELO -->
-  <!-- ========================= -->
-  <a-entity
-    gltf-model="#paletizadora"
-    position="0 0 -4"
-    rotation="0 180 0"
-    scale="0.03 0.03 0.03"
-    shadow="cast: true; receive: true">
-  </a-entity>
-
-  <!-- ========================= -->
-  <!-- SUELO (REFLEJO SUAVE) -->
-  <!-- ========================= -->
-  <a-plane
-    rotation="-90 0 0"
-    width="50"
-    height="50"
-    color="#999"
-    material="roughness: 0.4; metalness: 0.2"
-    shadow="receive: true">
-  </a-plane>
-
-  <!-- ========================= -->
-  <!-- CÁMARA -->
-  <!-- ========================= -->
-  <a-entity position="0 1.6 2">
-    <a-camera 
-      wasd-controls="acceleration: 20"
-      look-controls="pointerLockEnabled: true">
-    </a-camera>
-  </a-entity>
+<a-sky color="#ECECEC"></a-sky>
 
 </a-scene>
 
